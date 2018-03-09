@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Remove Line --><link rel="stylesheet" href="css/styles.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/5260d76e08.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Luminate Extend API -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luminateExtend/1.8.1/luminateExtend.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/5260d76e08.js"></script>
+  <!-- Slick for the cool carousel buttons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css
+  ">
+  <!-- Remove Line --><script src="js/script.js"></script>
+  <!-- Remove Line --><script src="js/api.js"></script>
+  
+  
+  <style>
+    /* Insert CSS Here */
+  </style>
+  <script>
+//Insert Javascript Here
+  </script>
+  <script>
+// Insert API Javascript Here
+  </script>
+</head>
+
+<body>
+  <div class="page">
+    <div id="header-desktop">
+      <a href="https://americares.org">
+        <img href="americares.org" src="https://secure.americares.org/images/content/pagebuilder/logo.png" alt="" class="header-logo">      
+      </a>
+      <div class='header-text'>
+        Every <strong class='head-strong'>$1</strong> donated can 
+        <br> 
+        provide <strong class='head-strong'>$20</strong> in aid.
+      </div>
+    </div>
+    <div class="content desktop">
+        <div class="text-appeal">
+          <div>
+            <strong style="color:#1762af; font-size: 22px;" id="subheader">Get Medicines & Critical Care to People in Need</strong>
+          </div>
+          <div style="">
+            <strong style="color:#1762af; margin-top:10px;">Your Donation Makes it Possible</strong>
+          </div>
+          <br>
+          <div id="desktop-logos-box">
+            <div style='width: 60%;'>
+              <img src="https://www.haitihealth.org/sites/default/files/charity-navigator-four-star-logo.gif" alt="" style='width:100%'>
+            </div>
+            <div style = 'width: 40%'>
+  
+            </div>
+            <div style='width: 15%; margin-top: 20px;'>
+              <img src="https://secure2.convio.net/amca/images/content/pagebuilder/screen-shot-2015-07-09-at-9.52.07-am.png" alt="" style='width:100%'>
+            </div>
+            <div style='width: 50%; margin-left:8%; margin-top:auto;'>
+              <img style = "width: 100%" src="https://i2.wp.com/www.force501.org/wp-content/uploads/2017/09/GuideStar-logo.png?resize=630%2C276" alt="">
+            </div>
+          </div>
+          <div style="padding-top: 20px;">
+            <a href="americares.org" style='margin-top: 20px;'>Other ways to give</a>
+          </div>
+  
+        </div>
+      <form id="desktop-donation-form" class="donation-component donation-form" method="POST" action="https://secure2.convio.net/amca/admin/CRConsAPI">
+        <div class="donation-header">
+          <div id='yourDonation' class="rounded">
+            <h3 style="margin-top: -20px; padding:5px">
+              Your Donation
+            </h3>
+          </div>
+          <div id="secure" style="width:80px; text-align:center; display:flex; float: right; margin-top:-45px; margin-right: -40px; background-color:#7cb7d7; border-radius: 7px;">
+            <i class="fa fa-lock" aria-hidden="true" style="color: #ffffff; padding-top:5px; padding-right:5px; padding-left:10px; padding-bottom:20px"></i>
+            <p style="color: #FFFFFF">secure</p>
+          </div>
+        </div>
+        <nav class="breadcrumb donation" >
+          <!-- <li id = "back-button" class="hidden">
+            <i class="fa fa-arrow-circle-left" aria-hidden="true" style="color:#1762af; font-size: 20px; padding-right:20px"></i>
+          </li> -->
+          <li class="breadcrumb-item active left-10"value=0>
+            <div style="display: flex">
+              <p class="number-circle">❶</p>
+              <p>Amount</p>
+            </div>            
+          <li class="breadcrumb-item left-10" value=1>
+              <div style="display: flex">
+                <p class="number-circle before-breadcrumb">❷</p>
+                <p>Personal Details</p>
+              </div>  
+          </li>
+          <li class="breadcrumb-item left-10" value=2>
+            <div style="display: flex">
+              <p class="number-circle before-breadcrumb">❸</p>
+              <p>Payment</p>
+              <br>
+            </div>  
+          </li>
+        </nav>
+        <div class="inner-box" id="amount">
+          <div class="inner-box">
+            <p class="inner-text">Select your contribution type:</p>
+            <div class="row" style="width: 100%;">
+              <div class="col-sm-6">
+                <button class="btn btn-active monthly-selector" id="give-once" value=0>Give Once</button>
+              </div>
+              <div class="col-sm-6">
+                <button class="btn monthly-selector" id="give-monthly" value=1>Monthly</button>
+              </div>
+            </div>
+            <div class="row one-time-options" style="padding-left: 10px;">
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop" value=50>$50</button>
+              </div>
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop btn-active" value=100>$100</button>
+              </div>
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop" value=250>$250</button>
+              </div>
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop" value=500>$500</button>
+              </div>
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop" value=1000>$1000</button>
+              </div>
+            </div>
+            <div class="row">                
+              <div class="col-sm-5" style="padding-top:15px;">
+                <label for="other-value" class="inner-text" name="">Own Amount:</label>
+                <div class = 'input-group'>
+                  <span class="input-group-addon">$</span>
+                  <input type="text" class="form-control desktop other-amount-desktop" id="other-value-desktop" placeholder="USD" name = "other_amount" value=5.00>
+                </div>
+              </div>
+              <div class="btn-group next-goup" style = "width: 40%; margin-left: 18%; ">
+                <button class="next btn" value=1 style="width: 100%; height: 35px; margin-top:40px; margin-right: -2%;">
+                  Next Step
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-box hidden" id="personal-details">
+          <p class="inner-text">Personal Information:</p>
+          <div class="row">
+            <div class="col-sm-6 input-left form-group">
+              <input type="text" class="form-control desktop" id="first_name" placeholder="First Name" name="billing.name.first" data-error="First name field cannot be blank.">
+            </div>
+
+            <div class="col-sm-6 input-right form-group">
+              <input type="text" class="form-control desktop" id="last_name" placeholder="Last Name" name="billing.name.last" data-error='Last name field cannot be blank.'>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-group input-left">
+              <input type="text" class="form-control desktop" placeholder="Street Address" name="billing.address.street1" data-error='Address field cannot be blank.'>
+            </div>
+            <div class="col-sm-6 form-group input-right">
+              <input type="text" class="form-control desktop" placeholder="City" name="billing.address.city" data-error='Address field cannot be blank.'>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 input-left form-group">
+              <!-- <input type="text" class="form-control desktop" id="state" placeholder="State / Province" name="billing.address.state"> -->
+              <select class="form-control desktop" name="billing.address.state" data-error='Select a state from the dropdown'>
+                  <option value='' selected disabled>State</option>
+                  <option value="AK">AK</option>
+                  <option value="AL">AL</option>
+                  <option value="AR">AR</option>
+                  <option value="AZ">AZ</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DC">DC</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="IA">IA</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="MA">MA</option>
+                  <option value="MD">MD</option>
+                  <option value="ME">ME</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MO">MO</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="NC">NC</option>
+                  <option value="ND">ND</option>
+                  <option value="NE">NE</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NV">NV</option>
+                  <option value="NY">NY</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VA">VA</option>
+                  <option value="VT">VT</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WV">WV</option>
+                  <option value="WY">WY</option>
+                  <option value="AS">AS</option>
+                  <option value="FM">FM</option>
+                  <option value="GU">GU</option>
+                  <option value="MH">MH</option>
+                  <option value="MP">MP</option>
+                  <option value="PR">PR</option>
+                  <option value="PW">PW</option>
+                  <option value="VI">VI</option>
+                  <option value="AA">AA</option>
+                  <option value="AE">AE</option>
+                  <option value="AP">AP</option>
+                  <option value="AB">AB</option>
+                  <option value="BC">BC</option>
+                  <option value="MB">MB</option>
+                  <option value="NB">NB</option>
+                  <option value="NL">NL</option>
+                  <option value="NS">NS</option>
+                  <option value="NT">NT</option>
+                  <option value="NU">NU</option>
+                  <option value="ON">ON</option>
+                  <option value="PE">PE</option>
+                  <option value="QC">QC</option>
+                  <option value="SK">SK</option>
+                  <option value="YT">YT</option>
+                  <option value="None">None</option>
+              </select>
+            </div>
+            <div class="col-sm-6 input-right form-group">
+              <input type="text" class="form-control desktop" id="billing.address.zip" placeholder="Zip / Postal Code" name="billing.address.zip" data-error='The zip field cannot be blank.'>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 input-left form-group" >
+              <input type="text" class="form-control desktop" id="email" placeholder="Email Address" name="donor.email" data-error='Email Address field cannot be left blank.'>
+            </div>
+            <div class="btn-group next-goup" style = "width: 40%; margin-left: 7%;">
+              <button class="btn back-btn" style="width: 30%; height: 35px;">
+                <i class="fa fa-arrow-circle-left back-icon" aria-hidden="true" style="font-size: 18px; font-size: 1.25vw;"></i>
+              </button>
+              <button class="next btn" value=2 style="width: 65%; height: 35px;">
+                Next Step
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <div class="inner-box hidden" id="payment">
+          <p class="inner-text">Credit Card Details</p>
+          <div class="row">
+            <div class='col-sm-7'>
+              <div class="form-group">
+                <input type="text" class="form-control desktop card_number" placeholder="Card Number" name="card_number" data-error="please enter a valid credit card number">
+              </div>
+
+            </div>
+            <div class='col-sm-4'>
+              <img src="https://www.merchantequip.com/image/?logos=v|m|a|d&height=32" alt="Merchant Equipment Store Credit Card Logos"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class='col-sm-3'>
+              <div class="form-group">
+                <select class="form-control desktop" id="sel1" name="card_exp_date_month" data-error="Select your card's expiration month from the dropdown.">
+                  <option value='' selected disabled>Month</option>
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                  <option value="4">04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+            </div>
+            <div class='col-sm-3'>
+              <div class="form-group">
+                <select class="form-control desktop" id="sel1" placeholder="Year" name="card_exp_date_year" data-error="Select your card's expiration year from the dropdown.">
+                  <option value="" selected disabled>Year</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2019">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <input type="text" class="form-control desktop" id="cvv" placeholder="CVV" name="cvv" data-error="Enter your card's CVV here. (This is a 3-4 digit number, usually located on the back of your card.">
+            </div>
+            <div class="col-sm-2" style="vertical-align: middle; padding-top:8px">
+              <a href="test.com" class="inner-text" style="font-size:12px">What's this?</a>
+            </div>
+            <div class="paypal-button desktop">
+              <p class='inner-text' style="font-size:16px; margin:0px">Pay With</p>
+              <div style='width: 50%; background-color: white; border-radius: 5px; padding:3px;'>
+                <img style="width: 100%;"src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" alt="PayPal" />
+              </div>
+            </div>
+          </div>
+          <div class = 'row'>
+            <div class = 'btn-group' style = "width: 50%; float: right;"> 
+              <button class="btn back-btn" style="width: 25%; height: 35px;">
+                <i class="fa fa-arrow-circle-left back-icon" aria-hidden="true" style="font-size: 22px; font-size: 1.25vw;"></i>
+              </button>
+              <div class ="btn btn-active donation-button" id ="desktop-donation-button" style="font-size: 16px; width:75%; display: flex; justify-content: space-around; height: 35px;">
+                Make Your Donation
+                <img src="https://secure2.convio.net/amca/images/content/pagebuilder/norton.png?t=1516064233130" alt="Norton Secured" style="height:25px; float: right;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5" style="float:right; margin-top:-30px; padding-right:0px; padding-bottom:0px">
+            <!-- <button class="btn btn-active next" value=1 style="color:#1762af;">Next Step</button> -->
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="content mobile";>
+      <div id="header-mobile">
+        <div style="width:100%">
+          <a href="https://americares.org">
+            <img class="img-responsive" src="https://secure.americares.org/images/content/pagebuilder/logo.png" alt="">          
+          </a>
+        </div>   
+      </div>
+
+      <div style="width:100%; text-align:center; margin-top: -20px">
+        <h4>
+          Every <strong class="head-strong">$1</strong> donated 
+        </h4>
+        <h4>  
+          can provide <strong class="head-strong">$20</strong> in aid.
+        </h4>
+      </div>         
+
+      <form id="mobile-form">
+        <div class="row" style="margin-left:0.5%;">
+          <button class="btn mobile monthly-selector btn-active" value="once">Give Once</button>
+          <button class="btn mobile monthly-selector" value="monthly">Monthly</button>            
+        </div>
+        <div style = "padding-top: 7.5px">
+          <div class="slick-carousel">
+            <button class="btn mobile value-selector-mobile" value=250>$250</button>
+            <button class="btn mobile value-selector-mobile" value=500>$500</button>
+            <button class="btn mobile value-selector-mobile" value=1000>$1000</button> 
+            <button class="btn mobile value-selector-mobile" value=50>$50</button>
+            <button class="btn mobile value-selector-mobile" value=100>$100</button> 
+          </div>
+        </div>
+        <div style="background-color:#f3f3f3; display: flex; margin: auto; padding-left:20px; padding-right:20px; line-height: 30px; height: 54px; align-items: center; justify-content: center;">
+          <label for="other-value" style="color: #000000;">Own Amount:</label>
+          <input type="text" class="form-control" id="other-value-mobile" placeholder="USD" name="other_amount" style = "background-color: white;">
+        </div>
+        <div class="lower-segment" style="padding-left: 10px; padding-right: 10px; padding-top: 15px;">
+          <div style="width: 80%; margin-left: auto; margin-right: auto;">
+            <button class="btn paypal-btn-mobile" style="background:#fcb730 !important">
+              Donate Now With <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div style="display: flex; flex-wrap:wrap; border-radius: 3px; margin-bottom: 10px;">
+          </div>
+          <form class="mobile-form">
+            <div id="mobile-credit-card-form" class = "centered-flex" style = "width: 85%">
+              <input type="text" name="card_number" placeholder="Card Number" class="mobile-input-box" style = "width: 100%">
+              <div style="width:30%">
+                <div class="">
+                  <select class="form-control mobile-input-box" name="card_exp_date_month">
+                    <option value="" selected disabled>Month</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                  </select>
+                </div>
+              </div>
+              <div style="width:30%">
+                <div class="form-group">
+                  <select class="form-control mobile-input-box" name="card_exp_date_year">
+                    <option value="" selected disabled>Year</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                  </select>
+                </div>
+              </div>
+              <input class="mobile-input-box" type="text" placeholder="CVV" name="cvv" style="width: 30%;">
+              <img src="https://www.merchantequip.com/image/?logos=v|m|a|d&height=32" alt="Merchant Equipment Store Credit Card Logos" style="height:30px; margin-top:10px;"
+              />
+              <h4 style = "width:100%; margin-top: 20px; margin-bottom:5px">Personal Info:</h4>
+              <input class="mobile-input-box" type="text" placeholder="First Name" style="width: 100%;" name="billing.name.first">
+              <input class="mobile-input-box" type="text" placeholder="Last Name" style="width: 100%;" name="billing.name.last">
+              <input class="mobile-input-box" type="text" placeholder="Street Address" style="width: 100%;" name="billing.address.street1">
+              <input class="mobile-input-box" type="text" placeholder="City" style="width: 100%;" name="billing.address.city">
+              
+              <select class="form-control mobile-input-box" name="billing.address.state" style="width: 48%;">
+                  <option>State</option>
+                  <option value="AK">AK</option>
+                  <option value="AL">AL</option>
+                  <option value="AR">AR</option>
+                  <option value="AZ">AZ</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DC">DC</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="IA">IA</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="MA">MA</option>
+                  <option value="MD">MD</option>
+                  <option value="ME">ME</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MO">MO</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="NC">NC</option>
+                  <option value="ND">ND</option>
+                  <option value="NE">NE</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NV">NV</option>
+                  <option value="NY">NY</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VA">VA</option>
+                  <option value="VT">VT</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WV">WV</option>
+                  <option value="WY">WY</option>
+                  <option value="AS">AS</option>
+                  <option value="FM">FM</option>
+                  <option value="GU">GU</option>
+                  <option value="MH">MH</option>
+                  <option value="MP">MP</option>
+                  <option value="PR">PR</option>
+                  <option value="PW">PW</option>
+                  <option value="VI">VI</option>
+                  <option value="AA">AA</option>
+                  <option value="AE">AE</option>
+                  <option value="AP">AP</option>
+                  <option value="AB">AB</option>
+                  <option value="BC">BC</option>
+                  <option value="MB">MB</option>
+                  <option value="NB">NB</option>
+                  <option value="NL">NL</option>
+                  <option value="NS">NS</option>
+                  <option value="NT">NT</option>
+                  <option value="NU">NU</option>
+                  <option value="ON">ON</option>
+                  <option value="PE">PE</option>
+                  <option value="QC">QC</option>
+                  <option value="SK">SK</option>
+                  <option value="YT">YT</option>
+                  <option value="None">None</option>
+              </select>
+              <input class="mobile-input-box" type="text" placeholder="ZIP/Postal Code" style="width: 48%;" name="billing.address.zip">
+              <input class="mobile-input-box" type="text" name="donor.email" placeholder="Email Address" style="width: 100%;">
+              <button class ="btn mobile primary" id="mobile-donation-button" style="font-size: 20px; margin-left: 10px; margin-right: 10px; vertical-align:middle; margin-top:20px; width: 100%;">Make Your Donation <img src="https://secure2.convio.net/amca/images/content/pagebuilder/norton.png?t=1516064233130" alt="Norton Secured" style="height: 30px; "></button>
+            </div>
+          </form>
+        </div>
+      </form>
+      <div id="footer-logos" style="display: flex; justify-content: space-between; padding-left: 10%; padding-right: 10%; padding-top: 20px;">
+        <div class = 'flex-center-vert' style = "width: 19%">
+          <img style = "width: 100%" src="https://secure2.convio.net/amca/images/content/pagebuilder/screen-shot-2015-07-09-at-9.52.07-am.png" alt="bbb logo">
+        </div>
+        <div class = 'flex-center-vert' style = "width: 22%">        
+          <img style = "width: 100%" src="https://www.haitihealth.org/sites/default/files/charity-navigator-four-star-logo.gif" alt=" charity navigator">
+        </div>
+        <div class = 'flex-center-vert' style = "width: 40%;">        
+          <img style = "width: 100%;" src="https://i2.wp.com/www.force501.org/wp-content/uploads/2017/09/GuideStar-logo.png?resize=630%2C276" alt="">
+        </div>
+      </div>
+    </div>
+    <img src="https://secure.americares.org/site/PixelServer" />
+  </div>
+</body>
+</html>

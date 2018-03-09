@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/5260d76e08.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Luminate Extend API -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luminateExtend/1.8.1/luminateExtend.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/5260d76e08.js"></script>
+  <!-- Slick for the cool carousel buttons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css
+  ">
+
+
+  
+  
+  <style>
+.page{
+  max-width: 1000px;
+  margin: auto;
+  }
+  #header-desktop{
+    background-image: url('https://secure2.convio.net/amca/images/content/pagebuilder/A_Masthead.png');
+    background-size:100% auto;
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+  }
+  .header-logo{
+    width: 40%;
+    padding: 20px;
+    /* float: right; */
+  }
+  .header-text{
+    font-size: 35px;
+    color: #FFFFFF;
+    float: right;
+    padding-right: 35px;
+    padding-top: 175px;
+  }
+  .head-strong{
+    color: #fcb730;
+  }
+  .content{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    padding: 20px;
+  }
+  .donation-header{
+    width: 100%;
+    margin-left: -10px;
+  }
+  .donation-form{
+    align-self: flex-start;
+    background-color: #7cb7d7;
+  }
+  #desktop-logos-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #yourDonation {
+    width:30%;
+    background-color: #1762af;
+    color: #FFFFFF;
+    border-radius: 5px;
+  }
+  .inner-box{
+    padding-right: 30px;
+  } 
+  .inner-text{
+    color: #ffffff;
+    font-size: 14px;
+  }
+  .btn.btn-active{
+    background-color: #fcb730 !important;
+  }
+  /* Bootstrap modiers */
+  .row{
+    margin:auto;
+  }
+  .col-sm-3{
+    padding-top: 10px;
+  }
+  .col-sm-6{
+    padding-bottom: 10px;
+  }
+  .col-sm-12{
+    padding-bottom: 10px;
+  }
+  .col-sm-5{
+    padding-bottom: 10px; 
+  }
+  .col-sm-2{
+    padding-right: 0px !important;
+    width:20% !important;
+    padding-left: 5px !important;
+  }
+  .breadcrumb.donation{
+    background-color: #7cb7d7 !important;
+    padding: 0px !important;
+  }
+  .breadcrumb-item{
+    font-size:16px;
+  }
+  .number-circle:after{
+    content: "  ";
+    white-space: pre;
+  }
+  /* Change the text between breadcrumbs */
+  .number-circle.before-breadcrumb:before{
+    display: inline-block;
+    content: "" !important;
+    border-top: 1px solid white;
+    width: 70px;
+    margin:  -3px 10px;
+    margin-left: 20px;
+    transform: translateY(-1rem);
+  }
+  .number-circle.completed:after{
+    content:"✓";
+    position: relative;
+    /* top: 100%; */
+    /* right: px; */
+    top: 20px;
+    right:18px;
+    color: black;
+  }
+  .breadcrumb>li+li:before{
+    content: "" !important
+  }
+  .btn{
+    background-color: #d7e9f3 !important;
+    color: #4e5864;
+  }
+  .btn.value-selector {
+    width: 100%;
+    font-size: 20px;
+  }
+  .btn.monthly-selector{
+    width: 100%;
+    font-size: 18px;
+  }
+  .number-circle{
+    font-size: 22px;
+    margin-top: -5px;
+    color: #1762af;
+  }
+  .form-group{
+    margin-bottom: 0px !important;
+  }
+  .input-right{
+    padding-left: 5px !important;
+  }
+  .input-left{
+    padding-right: 5px !important;
+  }
+  .numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+  
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+  }
+  .next{
+    background-color: #fcb730 !important;    
+    color: #1762af;
+    border-radius: 5px;
+    float: right;
+  }
+  .next-group{
+    width: 40%;
+  }
+  .btn-group>button>.back-icon{
+    font-size: 20px !important;
+  }
+  .paypal-button{
+    background-color: #1a80ac;
+    width: 30%;
+    float: right;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+  }
+  /* mobile */
+  /* content.mobile{
+    width:100%;
+  } */
+  #mobile-form{
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+  .mobile-form{
+    display: flex;
+  
+  }
+  #other-value-mobile{
+    border:none;
+    width: 35%;
+    margin-left: 20px;
+  }
+  .mobile-input-box{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    height: 34px;
+    border-bottom: 1px solid #a9abae !important;
+    background-color: #ffffff !important;
+  }
+  .form-control.mobile-input{
+    padding: 0px;
+  }
+
+  
+  .payment-method {
+    width: 50%;
+    border: none;
+    background-color: #ffffff;
+    font-size: 24px;
+    border: 2px solid #1762af
+  }
+  .payment-method.active{
+    background-color: #fadb9c;
+    border:none;
+  }
+  .paypal-btn-mobile{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 20px !important;
+    background-color: #fcb730 !important;
+  }
+  
+  .centered-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  
+  .btn.mobile.primary{
+    background-color: #fcb730 !important;
+    color: #1762af !important;
+  }
+  
+  .btn.mobile.monthly-selector{
+    width: 48%;
+    background-color: #ffffff !important;
+    border: 2px solid #1762af;
+    box-shadow: none !important;
+  }
+  
+  .btn.mobile.monthly-selector.btn-active{
+    background-color: #1762af !important;
+    color: #ffffff;
+    border: none !important;
+  }
+  
+  .btn.mobile.value-selector-mobile{
+    font-size:20px;
+    color: white;
+    background-color: #b7d5e5;
+    border-radius: 0px;
+  }
+  
+  .btn.mobile.value-selector-mobile.slick-center{
+    background-color: #55a8d5 !important;
+  }
+
+  .active-input{
+    
+  }
+  
+  /* slick carousel styling */
+  /* .footer-logo{
+    height: 40px;
+  } */
+
+
+  @media all and (min-width: 768px) {
+    .content.desktop {
+      display:flex;
+    }
+    .content.mobile {
+      display: none;
+    }
+    #header-mobile {
+      display: none;
+    }
+    .donation-form{
+      width: 65%;
+      padding-right: 30px;
+      padding-left: 30px;      
+      padding-top: 0px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+    .text-appeal{
+      width: 35%;
+      padding: 20px;
+    } 
+    #footer-logos{
+      float:right;
+      width: 30%;
+      padding:0px !important;
+      padding-right: 20px !important;
+    }
+  }
+  
+  @media all and (max-width: 768px) and (min-width: 0px){
+    .donation-form{
+      width: 100%;
+      padding: 20px;
+    }
+    .text-appeal{
+      width: 100%;
+      padding: 20px;
+    } 
+  }
+  
+  @media all and (max-width: 768px) and (min-width: 0px){
+    .content.desktop{
+      display:none;
+    }
+    #header-desktop{
+      display: none;
+    }
+    #header-mobile{
+      display: flex;
+      flex-wrap: wrap;
+      height: 100px;
+    }
+    .content.mobile{
+      display: block;
+    }
+    .donation-form{
+      width: 100%;
+      padding: 20px;
+    }
+    .text-appeal{
+      width: 100%;
+      padding: 20px;
+    } 
+}
+
+
+  /* Wrapper Styling */
+.wrapper-footer{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #324851;
+  justify-content: space-between;
+  color: white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-width: 1000px;  
+  margin: auto;
+}
+.footer-breadcrumbs{
+  display: flex;
+  list-style-type: none;
+  padding-bottom: 20px;
+  margin-top: 5px;
+}
+
+.footer-left-col{
+  width: 30%;
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: center;
+  padding:0px;
+}
+.footer-left-col>p{
+  margin: 0px;
+}
+.footer-right-col{
+  margin-top: 10px;    
+  margin-left: 5%;
+  width: 40%;
+}
+.footer-breadcrumbs>li+li::before{
+  padding-left: 5px;
+  content: '|'
+}
+.footer-logo{
+  margin-top: 10px;
+  width: 25%;
+  margin-right: 7%;
+  margin-left: 5%;
+}
+.footer-bottom-text-desktop{
+  width: 100%; 
+  text-align:center; 
+  font-size: 10px;  
+  font-size: 1.1vw;    
+  padding-top: 5px; 
+}
+.variable-text-small{
+  font-size: 11px;
+  font-size: 1.3vw;
+}
+.variable-text-medium{
+  font-size: 12px;
+  font-size: 1.5vw;
+}
+
+@media all and (min-width: 768px){
+  .wrapper-footer{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .footer-bottom-text-mobile{
+    display: none;
+  }
+  .footer-breadcrumbs>li>a{
+    color: white;
+    font-size: 11px;
+    font-size: 1.3vw !important;
+  }
+}
+@media all and (max-width: 768px){
+  .footer-description{
+    display: none;
+  }
+  .wrapper-footer{
+    padding-top: 10px;
+  }
+  .footer-logo{
+    /* width: 30%; */
+    /* margin-left: 0%;
+    margin-right: 2%;
+    margin-top: 0px; */
+  }
+  .footer-left-col{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-right-col{
+    width: 60%;
+    margin-left: 2%;
+    margin-top: 10px;
+  }
+  .footer-breadcrumbs>li>a{
+    font-size: 11px;
+    font-size: 2.3vw !important; 
+    color: #ffffff;
+    
+  }
+  .footer-breadcrumbs>li+li::before{
+    padding-left: 0px;
+    content: '|'
+  }
+  .footer-bottom-text-desktop{
+    display: none;
+  }    
+  .footer-bottom-text-mobile{
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 0px;
+  }
+  .variable-text-medium{
+    font-size: 12px;      
+  }
+  .variable-text-small{
+    font-size: 11px;
+  }
+}
+
+@media all and (min-width: 1010px){
+  /* prevent vws from getting too big */
+  .footer-bottom-text-desktop{
+    margin-top: 0px;
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  .variable-text-medium{
+    font-size: 12px;
+  }
+  .variable-text-small{
+    font-size: 11px;
+  }
+  .footer-breadcrumbs>li>a{
+    color: white;
+    font-size: 12px !important;
+  }
+}
+
+/* general purpose classes */
+.p-top-20{
+  padding-top: 20px;
+}
+
+.flex-center-vert{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+  </style>
+  <script>
+$(function () {
+  $('#give-once').focus();
+  toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-top-left",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
+  //API initialization
+  luminateExtend.init({
+    apiKey: 'amca',
+    path: {
+      nonsecure: 'http://www.myorganization.com/site/',
+      secure: 'https://secure2.convio.net/myorg/site/'
+    }
+  });
+
+  //Breadcrumb Selector
+  $('.breadcrumb-item').click(function (e) {
+    e.preventDefault();
+    var currentActive = $('.breadcrumb-item.active').val();
+    if(currentActive > $(this).val() || validateCurrentPage(currentActive)){
+      // $('.breadcrumb-item.active').removeClass('active');
+      $(this).addClass('active');
+      switch ($(this).val()) {
+        case 0:
+          $("#amount").removeClass("hidden");
+          $("#personal-details").addClass("hidden");
+          $("#payment").addClass("hidden");
+          break;
+        case 1:
+          $("#personal-details").removeClass("hidden");
+          $("#amount").addClass("hidden");
+          $("#payment").addClass("hidden");
+          $('#first_name').focus();
+          break;
+        case 2:
+          $("#payment").removeClass("hidden");
+          $("#personal-details").addClass("hidden");
+          $("#amount").addClass("hidden");
+          $('.desktop.card_number').focus();
+          break;
+      }
+    }
+  })
+  $('.back-btn').click(function(e){
+    e.preventDefault();
+    var currentActive = $('.breadcrumb-item.active');
+    var nextActive = currentActive.val() - 1;
+    if(nextActive>=0){
+      currentActive.removeClass('active');
+      $('.breadcrumb-item').each(function(){
+        if($(this).val() === nextActive){
+          $(this).addClass('active')
+        }
+      })
+      switch(nextActive){
+        case 0:
+          $('.back-btn').addClass('hidden');
+          $("#amount").removeClass("hidden");
+          $("#personal-details").addClass("hidden");
+          $("#payment").addClass("hidden");
+          break;
+        case 1:
+          $("#personal-details").removeClass("hidden");
+          $("#amount").addClass("hidden");
+          $("#payment").addClass("hidden");
+          $('#first_name').focus();                    
+          break;
+      }
+    }
+  })
+  $('.next').click(function(e){
+    e.preventDefault();
+    var nextVal = parseInt($(this).val());
+    var currentActive;
+    $('.breadcrumb-item').each(function(){
+      if($(this).val() === nextVal){
+        currentActive = $(this);
+      }
+    })
+    if(currentActive.val() > $(this).val() || validateCurrentPage(currentActive.val()-1)){
+      $('.breadcrumb-item.active').removeClass('active');  
+      currentActive.addClass('active')
+
+      switch (nextVal) {
+        case 0:
+          $("#amount").removeClass("hidden");
+          $("#personal-details").addClass("hidden");
+          $("#payment").addClass("hidden");
+          break;
+        case 1:
+          $("#personal-details").removeClass("hidden");
+          $("#amount").addClass("hidden");
+          $("#payment").addClass("hidden");
+          $('#first_name').focus();          
+          break;
+        case 2:
+          $("#payment").removeClass("hidden");
+          $("#personal-details").addClass("hidden");
+          $("#amount").addClass("hidden");
+          $('.desktop.card_number').focus();                   
+          break;
+        default:
+          break;
+      }
+    }
+  })
+  $('.desktop.value-selector').click(function(e){
+    e.preventDefault();
+    $('.value-selector').each(function(){
+      $(this).removeClass('btn-active')
+    })
+    $(this).addClass('btn-active');
+  })
+  $(".value-selector-mobile").click(function (e) {
+    e.preventDefault();
+    // $(".value-")
+    // $(".value-selector-mobile").each(function () {
+    //   $(this).removeClass("slissfdsdafasdfasdfasdfasdfasfasfdsda");
+    // });
+    // $(this).addClass("slissfdsdafasdfasdfasdfasdfasfasfdsda");
+    // $(this).removeClass("btn-inactive");
+    $(this)
+  })
+
+  $(".monthly-selector").click(function (e) {
+    e.preventDefault();
+    $(".monthly-selector").each(function () {
+      $(this).removeClass("btn-active");
+    });
+    $(this).addClass("btn-active");
+    $(this).removeClass("btn-inactive");
+  })
+  //Mobile UI Stuff
+  // $(".monthly-selector.mobile"){
+
+  // }
+  $(".payment-method").click(function(e){
+    e.preventDefault();
+    $('.payment-method').each(function(){
+      $(this).removeClass("active");
+    });
+    $(this).addClass("active");
+    switch($(this).val()){
+      case "credit card": 
+        $('#mobile-credit-card-form').removeClass('hidden')
+        $('#mobile-paypal-form').addClass('hidden')
+        $('#mobile-apple-pay-form').addClass('hidden')
+        break;
+      case "paypal":
+        $('#mobile-paypal-form').removeClass('hidden')
+        $('#mobile-credit-card-form').addClass('hidden')
+        $('#mobile-apple-pay-form').addClass('hidden')
+        break;
+      case "apple pay":
+        $('#mobile-apple-pay-form').removeClass('hidden')
+        $('#mobile-paypal-form').addClass('hidden')
+        $('#mobile-credit-card-form').addClass('hidden')
+        break;
+    }
+  })
+  $('.donation-button').click(function(e){
+    e.preventDefault();
+  })
+  $('paypal-btn-mobile').click(function(e){
+    e.preventDefault();
+  })
+  // Slick Carousel
+  $('.slick-carousel').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    centerMode: true,
+    centerPadding: '60px',
+    swipeToSlide: true,
+    edgeFriction: 0.01,
+    focusOnSelect: true
+  })    
+  //card number client validation
+  $('.card_number').focusout(function(e){
+    var formGroup = $(this).find('.form-group')
+    if(isValidCardNumber($(this).val())){
+      formGroup.removeClass('has-error')      
+      formGroup.addClass('has-success')
+    }
+    else{
+      formGroup.removeClass('has-success')
+      formGroup.addClass('has-error')
+      // toastr.error("Invalid credit card number");
+    };
+  })
+
+  $('#other-value-desktop').click(function(e){
+    e.preventDefault();
+    $('.value-selector.btn-active').removeClass('btn-active');
+    $(this).addClass('active-input');
+  })
+
+  //Final Donation Validation
+  $('#desktop-donation-button').click(function(e){
+    e.preventDefault();
+    if(validatePaymentPage()){
+     desktopDonation(); 
+    }
+  })
+
+  $('.desktop.paypal-button').click(function(e){
+    console.log('desktoppaypal'
+    )
+    e.preventDefault();
+    desktopPaypalRedirect();
+  })
+  $('#mobile-donation-button').click(function(e){
+    e.preventDefault();
+    console.log("deesh")    
+    mobileDonation();
+  })
+  $('.paypal-btn-mobile').click(function(e){
+    e.preventDefault();
+    console.log("feesh")
+    mobilePaypalRedirect();
+  })
+  function validateCurrentPage(validateId){
+    switch(validateId){
+      case 0:
+        return validateAmountPage();
+        break;
+      case 1:
+        return validatePersonalPage();
+        break;
+      case 2:
+        return validatePaymentPage();
+        break;
+    }
+  }
+  //amount page client validation
+  function validateAmountPage(){
+    if(getDonationIncrement()[1]){
+      return true;
+    }
+    toastr.error("Please Select an Amount.");      
+    return false;
+  }
+
+  //personal detail page client validation
+  function validatePersonalPage(){
+    return validateForm('#personal-details')
+  }
+
+  //personal payment page client validation
+  function validatePaymentPage(){
+    return validateForm('#payment')
+  }
+
+  function getDonationIncrement(){
+    var increment = $('.monthly-selector.btn-active').val();
+    var amount = $('.other-amount-desktop').val();
+    if(amount === ""){
+      amount = $('.value-selector.btn-active').val();
+    }
+    if(!amount){
+      return [null, null];
+    }
+    return [increment, amount]
+  }
+
+  function isValidCardNumber(cardNum){
+    var reg = new RegExp("^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$")
+    return reg.test(cardNum);
+  }
+
+  function validateEmailAddress(email_address){
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email_address).toLowerCase());
+  }
+
+  function validateForm(formId){
+    var isValid = true;
+    var $inputs = $(formId + ' :input');
+    $inputs.each(function(){
+      console.log($(this).attr('name') === 'cvv')
+      if(!$(this).val() && !$(this).hasClass('btn') && $(this).attr('name') !== 'cvv'){
+        $(this).parent().removeClass('has-success')
+        $(this).parent().addClass('has-error')
+        toastr.error($(this).data('error'));
+        isValid = false;
+      }
+      else{
+        checkAdditionalFields(this);
+        $(this).parent().removeClass('has-error')
+        $(this).parent().addClass('has-success')        
+      }
+    })
+    return isValid;
+  }
+
+  function checkAdditionalFields(field){
+    var value = $(field).val();
+    switch($(field).attr('name')){
+      case 'donor.email':
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(re.test(String(value).toLowerCase())){
+          return "Email address is invalid."
+        }
+        else{
+          return null;
+        }
+        break;
+      case 'card_cvv':
+        var re = /^[0-9]{3,4}$/;
+        if(re.test(String(value).toLowerCase())){
+          return "CVV is invalid."
+        }
+        else{
+          return null;
+        }
+    }
+    
+  }
+
+  function sendStandardDonation(){
+    console.log("donate dat boyo")
+  }
+})
+  </script>
+  <script>
+"use strict"
+var shadow_form_id = 22851;
+// var shadow_form_id = 22787;
+var global_response;
+$(function(){
+})
+var testGlobal;
+function desktopDonation(){
+  var isRecurring = $('#amount').find('.monthly-selector.btn-active').val() === '1';
+  var value = getDesktopValue();
+  var donationFields = $('#desktop-donation-form').serializeArray();
+  var other_amount = $('other-value-desktop').val();
+  
+  var test_data = {
+    card_number: "4111111111111111",
+    card_cvv:"111"
+  }
+  var data = {
+    method: 'donate',
+    v: '1.0',    
+    api_key: 'amca',
+    summary: 'page',
+    other_amount: value,
+    form_id: shadow_form_id,
+    df_preview: true,
+    level_id: 73592,
+    send_registration_email: true,
+    response_format: 'json',
+  }
+  data['donor.phone'] =  '5179143375'
+  var paymentData = {};
+  //These fields must be sent in the POST data object instead of the url for security purposes
+  var paymentFields = ['card_number', 'card_cvv', 'card_exp_date_year', 'card_exp_date_month']
+  donationFields.forEach(function(field){
+    if(paymentFields.indexOf(field.name) !== -1){
+      if(field.name === 'card_number' || field.name ==='card_cvv')
+        paymentData[field.name]=field.value.replace(/\D/g,'');
+      else
+        paymentData[field.name]=field.value;
+    }
+    else{
+      data[field.name] = field.value;
+      if(field.name.includes("billing")){
+        data[field.name.replace("billing", "donor")] = field.value;
+      }  
+    }
+  })
+  if(isRecurring){
+    data.sustaining={
+      duration : 0,
+      frequency : 'monthly'
+    }
+  }
+  donationFields['billing.address.country'] = "United States" 
+  // delete paymentData.card_exp_date_month;
+  // delete paymentData.card_exp_date_year;
+  // paymentData.card_exp_date = paymentData.card_exp_date_month + '/' + paymentData.card_exp_date_year;
+
+  paymentData.cardType = getCardType(paymentData.card_number);  
+  
+  var formattedURL =  objectToPostString('https://secure.americares.org/site/CRDonationAPI?', data)
+  $.ajax({
+    type: 'POST',
+    url: formattedURL,
+    data: paymentData,
+    success: function(result){
+      toastr.success('Donation submitted successfully')      
+      testGlobal = result;
+      var html = JSON.parse(result).donationResponse.donation.summary_page
+      $('.page').addClass('hidden');
+      document.body.innerHTML = document.body.innerHTML + html
+      // document.write(html);
+      // document.close();
+    },
+    error: function(result){
+      console.log(result)
+      errorHandler(result);
+      global_response = result;
+      parsedResult = JSON.parse(result.responseText);
+      console.log(parsedResult)
+      toastr.error('error');
+    }
+  })
+}
+
+function desktopPaypalRedirect(){
+  var isRecurring = $('#amount').find('.monthly-selector.btn-active').val() === '1';
+  var value = getDesktopValue();
+  var donationFields = $('#desktop-donation-form').serializeArray();
+  var data = {
+    method: 'startDonation',
+    v: '1.0',    
+    api_key: 'amca',
+    summary: 'page',
+    finish_success_redirect: 'https://secure.americares.org/site/success',
+    finish_error_redirect: "https://secure.americares.org/site/failure",
+    extproc: 'paypal',
+    other_amount: value,
+    form_id: shadow_form_id,
+    // df_preview: true,
+    validate: false,
+    level_id: 73592,
+    send_registration_email: true   
+  }
+  var paymentData = {};
+  //These fields must be sent in the POST data object instead of the url for security purposes
+  var paymentFields = ['card_number', 'card_cvv', 'card_exp_date_year', 'card_exp_date_month']
+  donationFields.forEach(function(field){
+    if(paymentFields.indexOf(field.name) !== -1){
+      if(field.name === 'card_number' || field.name ==='card_cvv')
+        paymentData[field.name]=field.value.replace(/\D/g,'');
+      else
+        paymentData[field.name]=field.value;
+    }
+    else{
+      data[field.name] = field.value;
+      if(field.name.includes("billing")){
+        data[field.name.replace("billing", "donor")] = field.value;
+      }  
+    }
+  })
+  if(isRecurring){
+    data.sustaining={
+      duration : 0,
+      frequency : 'monthly'
+    }
+  }
+  paymentData.cardType = getCardType(paymentData.card_number);  
+  data.other_amount = getDesktopValue();
+  var formattedURL =  objectToPostString('https://secure.americares.org/site/CRDonationAPI?', data)
+  $.ajax({
+    type: 'POST',
+    url: formattedURL,
+    data: paymentData,
+    success: function(result){
+      testGlobal = $.parseXML(result);
+      window.open($(result).find('url').text())
+    },
+    error: function(result){
+      errorHandler(result);
+    }
+  })
+}
+
+function mobileDonation(){
+  var isRecurring = $('#amount').find('.monthly-selector.btn-active').val() === '1';  
+  var value = getMobileValue();
+  var donationFields = $('#mobile-form').serializeArray();
+  var data = {
+    method: 'donate',
+    v: '1.0',    
+    api_key: 'amca',
+    summary: 'page',
+    other_amount: value,
+    form_id: shadow_form_id,
+    // df_preview: true,
+    validate: false,
+    level_id: 73592,
+    send_registration_email: true,
+    response_format: 'json'         
+  } 
+  if(isRecurring){
+    data.sustaining={
+      duration : 0,
+      frequency : 'monthly'
+    }
+  }
+  var paymentData = {};
+  //These fields must be sent in the POST data object instead of the url for security purposes
+  var paymentFields = ['card_number', 'card_cvv', 'card_exp_date_year', 'card_exp_date_month'];
+  donationFields.forEach(function(field){
+    if(paymentFields.indexOf(field.name) !== -1){
+      if(field.name === 'card_number' || field.name ==='card_cvv')
+        paymentData[field.name]=field.value.replace(/\D/g,'');
+      else
+        paymentData[field.name]=field.value;
+    }
+    else{
+      data[field.name] = field.value;
+      if(field.name.includes("billing")){
+        data[field.name.replace("billing", "donor")] = field.value;
+      }  
+    }
+  })
+  paymentData.cardType = getCardType(paymentData.card_number);  
+
+  var formattedURL =  objectToPostString('https://secure.americares.org/site/CRDonationAPI?', data)
+  $.ajax({
+    type: 'POST',
+    url: formattedURL,
+    data: paymentData,
+    success: function(result){
+      toastr.success('Donation submitted successfully')      
+      testGlobal = result;
+      var html = JSON.parse(result).donationResponse.donation.summary_page
+      $('.page').addClass('hidden');
+      document.body.innerHTML = document.body.innerHTML + html
+    },
+    error: function(result){
+      console.log(result)
+      errorHandler(result);
+      global_response = result;
+      parsedResult = JSON.parse(result.responseText);
+      console.log(parsedResult)
+    }
+  })
+}
+
+function mobilePaypalRedirect(){
+  var isRecurring = $('#amount').find('.monthly-selector.btn-active').val() === '1';  
+  var value = getMobileValue();
+  var donationFields = $('#mobile-form').serializeArray();
+  var data = {
+    method: 'startDonation',
+    v: '1.0',    
+    api_key: 'amca',
+    summary: 'page',
+    finish_success_redirect: 'https://secure.americares.org/site/success',
+    finish_error_redirect: "https://secure.americares.org/site/failure",
+    extproc: 'paypal',
+    other_amount: value,
+    form_id: shadow_form_id,
+    // df_preview: true,
+    validate: false,
+    level_id: 73592,
+    send_registration_email: true    
+  } 
+  if(isRecurring){
+    data.sustaining={
+      duration : 0,
+      frequency : 'monthly'
+    }
+  }
+  var paymentData = {};
+  //These fields must be sent in the POST data object instead of the url for security purposes
+  var paymentFields = ['card_number', 'card_cvv', 'card_exp_date_year', 'card_exp_date_month'];
+  donationFields.forEach(function(field){
+    if(paymentFields.indexOf(field.name) !== -1){
+      if(field.name === 'card_number' || field.name ==='card_cvv')
+        paymentData[field.name]=field.value.replace(/\D/g,'');
+      else
+        paymentData[field.name]=field.value;
+    }
+    else{
+      data[field.name] = field.value;
+      if(field.name.includes("billing")){
+        data[field.name.replace("billing", "donor")] = field.value;
+      }  
+    }
+  })
+
+  paymentData.cardType = getCardType(paymentData.card_number);
+  console.log(paymentData.cardType)
+
+
+  var formattedURL =  objectToPostString('https://secure.americares.org/site/CRDonationAPI?', data)
+  $.ajax({
+    type: 'POST',
+    url: formattedURL,
+    data: paymentData,
+    success: function(result){
+      testGlobal = $.parseXML(result);
+      window.open($(result).find('url').text())
+    },
+    error: function(result){
+      errorHandler(result);
+    }
+  })
+}
+
+
+function getDesktopValue(){
+  var value = $('#other-value-desktop').val();
+  if(!value){
+    value = $('.value-selector.desktop.btn-active').val();    
+  }
+  return value;
+}
+
+function getMobileValue(){
+  var value = $('#other-value-mobile').val();
+  if(!value){
+    value = $('.value-selector-mobile.mobile.slick-current').val();
+  }
+  return value;
+}
+
+function objectToPostString(startString, data){
+  var formattedString = startString ? startString : '';
+  for(var key in data){
+    if(data.hasOwnProperty(key)){
+      if(formattedString.length > 1){
+        if(data[key] !== ''){
+          formattedString += '&' + key + "=" + data[key];
+        }
+      }
+      else{
+        formattedString = key + '=' + data[key];
+      }
+    }
+  }
+  if(data['method'] === 'startDonation' && !data['billing.name.first']){
+    console.log("meow")
+    formattedString += "&billing.name.last= americares&donor.name.last= &billing.name.first= &donor.name.first= ";
+  }
+  else
+    console.log("peow")
+  return formattedString;
+}
+
+// https://gist.github.com/swapnilmishra/dec37ee5a820de6cbca5
+function getCardType(cardNum) {
+  var re = {
+    electron: /^(4026|417500|4405|4508|4844|4913|4917)\d+$/,
+    maestro: /^(5018|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390)\d+$/,
+    dankort: /^(5019)\d+$/,
+    interpayment: /^(636)\d+$/,
+    unionpay: /^(62|88)\d+$/,
+    visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
+    mastercard: /^5[1-5][0-9]{14}$/,
+    amex: /^3[47][0-9]{13}$/,
+    diners: /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/,
+    discover: /^6(?:011|5[0-9]{2})[0-9]{12}$/,
+    jcb: /^(?:2131|1800|35\d{3})\d{11}$/
+  }
+
+  for(var key in re) {
+      if(re[key].test(cardNum)) {
+          return key
+      }
+  }
+}
+
+function errorHandler(result){
+  global_response = result;
+  var parsedResult = JSON.parse(result.responseText);
+  console.log(parsedResult);
+  if(parsedResult.donationResponse && parsedResult.donationResponse.errors){
+    if(parsedResult.donationResponse.errors.declineUserMessage){
+      toastr.error(parsedResult.donationResponse.errors.declineUserMessage);
+    }
+    else if(parsedResult.donationResponse.errors.pageError){
+      console.log()
+      console.log(parsedResult.donationResponse.errors.pageError);
+      toastr.error(parsedResult.donationResponse.errors.pageError);
+    }
+  }
+}
+  </script>
+</head>
+
+<body>
+  <div class="page">
+    <div id="header-desktop">
+      <a href="https://americares.org">
+        <img href="americares.org" src="https://secure.americares.org/images/content/pagebuilder/logo.png" alt="" class="header-logo">      
+      </a>
+      <div class='header-text'>
+        Every <strong class='head-strong'>$1</strong> donated can 
+        <br> 
+        provide <strong class='head-strong'>$20</strong> in aid.
+      </div>
+    </div>
+    <div class="content desktop">
+        <div class="text-appeal">
+          <div>
+            <strong style="color:#1762af; font-size: 22px;" id="subheader">Get Medicines & Critical Care to People in Need</strong>
+          </div>
+          <div style="">
+            <strong style="color:#1762af; margin-top:10px;">Your Donation Makes it Possible</strong>
+          </div>
+          <br>
+          <div id="desktop-logos-box">
+            <div style='width: 60%;'>
+              <img src="https://www.haitihealth.org/sites/default/files/charity-navigator-four-star-logo.gif" alt="" style='width:100%'>
+            </div>
+            <div style = 'width: 40%'>
+  
+            </div>
+            <div style='width: 15%; margin-top: 20px;'>
+              <img src="https://secure2.convio.net/amca/images/content/pagebuilder/screen-shot-2015-07-09-at-9.52.07-am.png" alt="" style='width:100%'>
+            </div>
+            <div style='width: 50%; margin-left:8%; margin-top:auto;'>
+              <img style = "width: 100%" src="https://i2.wp.com/www.force501.org/wp-content/uploads/2017/09/GuideStar-logo.png?resize=630%2C276" alt="">
+            </div>
+          </div>
+          <div style="padding-top: 20px;">
+            <a href="americares.org" style='margin-top: 20px;'>Other ways to give</a>
+          </div>
+  
+        </div>
+      <form id="desktop-donation-form" class="donation-component donation-form" method="POST" action="https://secure2.convio.net/amca/admin/CRConsAPI">
+        <div class="donation-header">
+          <div id='yourDonation' class="rounded">
+            <h3 style="margin-top: -20px; padding:5px">
+              Your Donation
+            </h3>
+          </div>
+          <div id="secure" style="width:80px; text-align:center; display:flex; float: right; margin-top:-45px; margin-right: -40px; background-color:#7cb7d7; border-radius: 7px;">
+            <i class="fa fa-lock" aria-hidden="true" style="color: #ffffff; padding-top:5px; padding-right:5px; padding-left:10px; padding-bottom:20px"></i>
+            <p style="color: #FFFFFF">secure</p>
+          </div>
+        </div>
+        <nav class="breadcrumb donation" >
+          <!-- <li id = "back-button" class="hidden">
+            <i class="fa fa-arrow-circle-left" aria-hidden="true" style="color:#1762af; font-size: 20px; padding-right:20px"></i>
+          </li> -->
+          <li class="breadcrumb-item active left-10"value=0>
+            <div style="display: flex">
+              <p class="number-circle">❶</p>
+              <p>Amount</p>
+            </div>            
+          <li class="breadcrumb-item left-10" value=1>
+              <div style="display: flex">
+                <p class="number-circle before-breadcrumb">❷</p>
+                <p>Personal Details</p>
+              </div>  
+          </li>
+          <li class="breadcrumb-item left-10" value=2>
+            <div style="display: flex">
+              <p class="number-circle before-breadcrumb">❸</p>
+              <p>Payment</p>
+              <br>
+            </div>  
+          </li>
+        </nav>
+        <div class="inner-box" id="amount">
+          <div class="inner-box">
+            <p class="inner-text">Select your contribution type:</p>
+            <div class="row" style="width: 100%;">
+              <div class="col-sm-6">
+                <button class="btn btn-active monthly-selector" id="give-once" value=0>Give Once</button>
+              </div>
+              <div class="col-sm-6">
+                <button class="btn monthly-selector" id="give-monthly" value=1>Monthly</button>
+              </div>
+            </div>
+            <div class="row one-time-options" style="padding-left: 10px;">
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop" value=50>$50</button>
+              </div>
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop btn-active" value=100>$100</button>
+              </div>
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop" value=250>$250</button>
+              </div>
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop" value=500>$500</button>
+              </div>
+              <div class="col-sm-2">
+                <button class="btn value-selector desktop" value=1000>$1000</button>
+              </div>
+            </div>
+            <div class="row">                
+              <div class="col-sm-5" style="padding-top:15px;">
+                <label for="other-value" class="inner-text" name="">Own Amount:</label>
+                <div class = 'input-group'>
+                  <span class="input-group-addon">$</span>
+                  <input type="text" class="form-control desktop other-amount-desktop" id="other-value-desktop" placeholder="USD" name = "other_amount" value=5.00>
+                </div>
+              </div>
+              <div class="btn-group next-goup" style = "width: 40%; margin-left: 18%; ">
+                <button class="next btn" value=1 style="width: 100%; height: 35px; margin-top:40px; margin-right: -2%;">
+                  Next Step
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner-box hidden" id="personal-details">
+          <p class="inner-text">Personal Information:</p>
+          <div class="row">
+            <div class="col-sm-6 input-left form-group">
+              <input type="text" class="form-control desktop" id="first_name" placeholder="First Name" name="billing.name.first" data-error="First name field cannot be blank.">
+            </div>
+
+            <div class="col-sm-6 input-right form-group">
+              <input type="text" class="form-control desktop" id="last_name" placeholder="Last Name" name="billing.name.last" data-error='Last name field cannot be blank.'>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-group input-left">
+              <input type="text" class="form-control desktop" placeholder="Street Address" name="billing.address.street1" data-error='Address field cannot be blank.'>
+            </div>
+            <div class="col-sm-6 form-group input-right">
+              <input type="text" class="form-control desktop" placeholder="City" name="billing.address.city" data-error='Address field cannot be blank.'>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 input-left form-group">
+              <!-- <input type="text" class="form-control desktop" id="state" placeholder="State / Province" name="billing.address.state"> -->
+              <select class="form-control desktop" name="billing.address.state" data-error='Select a state from the dropdown'>
+                  <option value='' selected disabled>State</option>
+                  <option value="AK">AK</option>
+                  <option value="AL">AL</option>
+                  <option value="AR">AR</option>
+                  <option value="AZ">AZ</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DC">DC</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="IA">IA</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="MA">MA</option>
+                  <option value="MD">MD</option>
+                  <option value="ME">ME</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MO">MO</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="NC">NC</option>
+                  <option value="ND">ND</option>
+                  <option value="NE">NE</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NV">NV</option>
+                  <option value="NY">NY</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VA">VA</option>
+                  <option value="VT">VT</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WV">WV</option>
+                  <option value="WY">WY</option>
+                  <option value="AS">AS</option>
+                  <option value="FM">FM</option>
+                  <option value="GU">GU</option>
+                  <option value="MH">MH</option>
+                  <option value="MP">MP</option>
+                  <option value="PR">PR</option>
+                  <option value="PW">PW</option>
+                  <option value="VI">VI</option>
+                  <option value="AA">AA</option>
+                  <option value="AE">AE</option>
+                  <option value="AP">AP</option>
+                  <option value="AB">AB</option>
+                  <option value="BC">BC</option>
+                  <option value="MB">MB</option>
+                  <option value="NB">NB</option>
+                  <option value="NL">NL</option>
+                  <option value="NS">NS</option>
+                  <option value="NT">NT</option>
+                  <option value="NU">NU</option>
+                  <option value="ON">ON</option>
+                  <option value="PE">PE</option>
+                  <option value="QC">QC</option>
+                  <option value="SK">SK</option>
+                  <option value="YT">YT</option>
+                  <option value="None">None</option>
+              </select>
+            </div>
+            <div class="col-sm-6 input-right form-group">
+              <input type="text" class="form-control desktop" id="billing.address.zip" placeholder="Zip / Postal Code" name="billing.address.zip" data-error='The zip field cannot be blank.'>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 input-left form-group" >
+              <input type="text" class="form-control desktop" id="email" placeholder="Email Address" name="donor.email" data-error='Email Address field cannot be left blank.'>
+            </div>
+            <div class="btn-group next-goup" style = "width: 40%; margin-left: 7%;">
+              <button class="btn back-btn" style="width: 30%; height: 35px;">
+                <i class="fa fa-arrow-circle-left back-icon" aria-hidden="true" style="font-size: 18px; font-size: 1.25vw;"></i>
+              </button>
+              <button class="next btn" value=2 style="width: 65%; height: 35px;">
+                Next Step
+              </button>
+            </div>
+
+          </div>
+        </div>
+        <div class="inner-box hidden" id="payment">
+          <p class="inner-text">Credit Card Details</p>
+          <div class="row">
+            <div class='col-sm-7'>
+              <div class="form-group">
+                <input type="text" class="form-control desktop card_number" placeholder="Card Number" name="card_number" data-error="please enter a valid credit card number">
+              </div>
+
+            </div>
+            <div class='col-sm-4'>
+              <img src="https://www.merchantequip.com/image/?logos=v|m|a|d&height=32" alt="Merchant Equipment Store Credit Card Logos"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class='col-sm-3'>
+              <div class="form-group">
+                <select class="form-control desktop" id="sel1" name="card_exp_date_month" data-error="Select your card's expiration month from the dropdown.">
+                  <option value='' selected disabled>Month</option>
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                  <option value="4">04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+            </div>
+            <div class='col-sm-3'>
+              <div class="form-group">
+                <select class="form-control desktop" id="sel1" placeholder="Year" name="card_exp_date_year" data-error="Select your card's expiration year from the dropdown.">
+                  <option value="" selected disabled>Year</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2019">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <input type="text" class="form-control desktop" id="cvv" placeholder="CVV" name="cvv" data-error="Enter your card's CVV here. (This is a 3-4 digit number, usually located on the back of your card.">
+            </div>
+            <div class="col-sm-2" style="vertical-align: middle; padding-top:8px">
+              <a href="test.com" class="inner-text" style="font-size:12px">What's this?</a>
+            </div>
+            <div class="paypal-button desktop">
+              <p class='inner-text' style="font-size:16px; margin:0px">Pay With</p>
+              <div style='width: 50%; background-color: white; border-radius: 5px; padding:3px;'>
+                <img style="width: 100%;"src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" alt="PayPal" />
+              </div>
+            </div>
+          </div>
+          <div class = 'row'>
+            <div class = 'btn-group' style = "width: 50%; float: right;"> 
+              <button class="btn back-btn" style="width: 25%; height: 35px;">
+                <i class="fa fa-arrow-circle-left back-icon" aria-hidden="true" style="font-size: 22px; font-size: 1.25vw;"></i>
+              </button>
+              <div class ="btn btn-active donation-button" id ="desktop-donation-button" style="font-size: 16px; width:75%; display: flex; justify-content: space-around; height: 35px;">
+                Make Your Donation
+                <img src="https://secure2.convio.net/amca/images/content/pagebuilder/norton.png?t=1516064233130" alt="Norton Secured" style="height:25px; float: right;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5" style="float:right; margin-top:-30px; padding-right:0px; padding-bottom:0px">
+            <!-- <button class="btn btn-active next" value=1 style="color:#1762af;">Next Step</button> -->
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="content mobile";>
+      <div id="header-mobile">
+        <div style="width:100%">
+          <a href="https://americares.org">
+            <img class="img-responsive" src="https://secure.americares.org/images/content/pagebuilder/logo.png" alt="">          
+          </a>
+        </div>   
+      </div>
+
+      <div style="width:100%; text-align:center; margin-top: -20px">
+        <h4>
+          Every <strong class="head-strong">$1</strong> donated 
+        </h4>
+        <h4>  
+          can provide <strong class="head-strong">$20</strong> in aid.
+        </h4>
+      </div>         
+
+      <form id="mobile-form">
+        <div class="row" style="margin-left:0.5%;">
+          <button class="btn mobile monthly-selector btn-active" value="once">Give Once</button>
+          <button class="btn mobile monthly-selector" value="monthly">Monthly</button>            
+        </div>
+        <div style = "padding-top: 7.5px">
+          <div class="slick-carousel">
+            <button class="btn mobile value-selector-mobile" value=250>$250</button>
+            <button class="btn mobile value-selector-mobile" value=500>$500</button>
+            <button class="btn mobile value-selector-mobile" value=1000>$1000</button> 
+            <button class="btn mobile value-selector-mobile" value=50>$50</button>
+            <button class="btn mobile value-selector-mobile" value=100>$100</button> 
+          </div>
+        </div>
+        <div style="background-color:#f3f3f3; display: flex; margin: auto; padding-left:20px; padding-right:20px; line-height: 30px; height: 54px; align-items: center; justify-content: center;">
+          <label for="other-value" style="color: #000000;">Own Amount:</label>
+          <input type="text" class="form-control" id="other-value-mobile" placeholder="USD" name="other_amount" style = "background-color: white;">
+        </div>
+        <div class="lower-segment" style="padding-left: 10px; padding-right: 10px; padding-top: 15px;">
+          <div style="width: 80%; margin-left: auto; margin-right: auto;">
+            <button class="btn paypal-btn-mobile" style="background:#fcb730 !important">
+              Donate Now With <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div style="display: flex; flex-wrap:wrap; border-radius: 3px; margin-bottom: 10px;">
+          </div>
+          <form class="mobile-form">
+            <div id="mobile-credit-card-form" class = "centered-flex" style = "width: 85%">
+              <input type="text" name="card_number" placeholder="Card Number" class="mobile-input-box" style = "width: 100%">
+              <div style="width:30%">
+                <div class="">
+                  <select class="form-control mobile-input-box" name="card_exp_date_month">
+                    <option value="" selected disabled>Month</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                  </select>
+                </div>
+              </div>
+              <div style="width:30%">
+                <div class="form-group">
+                  <select class="form-control mobile-input-box" name="card_exp_date_year">
+                    <option value="" selected disabled>Year</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                  </select>
+                </div>
+              </div>
+              <input class="mobile-input-box" type="text" placeholder="CVV" name="cvv" style="width: 30%;">
+              <img src="https://www.merchantequip.com/image/?logos=v|m|a|d&height=32" alt="Merchant Equipment Store Credit Card Logos" style="height:30px; margin-top:10px;"
+              />
+              <h4 style = "width:100%; margin-top: 20px; margin-bottom:5px">Personal Info:</h4>
+              <input class="mobile-input-box" type="text" placeholder="First Name" style="width: 100%;" name="billing.name.first">
+              <input class="mobile-input-box" type="text" placeholder="Last Name" style="width: 100%;" name="billing.name.last">
+              <input class="mobile-input-box" type="text" placeholder="Street Address" style="width: 100%;" name="billing.address.street1">
+              <input class="mobile-input-box" type="text" placeholder="City" style="width: 100%;" name="billing.address.city">
+              
+              <select class="form-control mobile-input-box" name="billing.address.state" style="width: 48%;">
+                  <option>State</option>
+                  <option value="AK">AK</option>
+                  <option value="AL">AL</option>
+                  <option value="AR">AR</option>
+                  <option value="AZ">AZ</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DC">DC</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="IA">IA</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="MA">MA</option>
+                  <option value="MD">MD</option>
+                  <option value="ME">ME</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MO">MO</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="NC">NC</option>
+                  <option value="ND">ND</option>
+                  <option value="NE">NE</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NV">NV</option>
+                  <option value="NY">NY</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VA">VA</option>
+                  <option value="VT">VT</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WV">WV</option>
+                  <option value="WY">WY</option>
+                  <option value="AS">AS</option>
+                  <option value="FM">FM</option>
+                  <option value="GU">GU</option>
+                  <option value="MH">MH</option>
+                  <option value="MP">MP</option>
+                  <option value="PR">PR</option>
+                  <option value="PW">PW</option>
+                  <option value="VI">VI</option>
+                  <option value="AA">AA</option>
+                  <option value="AE">AE</option>
+                  <option value="AP">AP</option>
+                  <option value="AB">AB</option>
+                  <option value="BC">BC</option>
+                  <option value="MB">MB</option>
+                  <option value="NB">NB</option>
+                  <option value="NL">NL</option>
+                  <option value="NS">NS</option>
+                  <option value="NT">NT</option>
+                  <option value="NU">NU</option>
+                  <option value="ON">ON</option>
+                  <option value="PE">PE</option>
+                  <option value="QC">QC</option>
+                  <option value="SK">SK</option>
+                  <option value="YT">YT</option>
+                  <option value="None">None</option>
+              </select>
+              <input class="mobile-input-box" type="text" placeholder="ZIP/Postal Code" style="width: 48%;" name="billing.address.zip">
+              <input class="mobile-input-box" type="text" name="donor.email" placeholder="Email Address" style="width: 100%;">
+              <button class ="btn mobile primary" id="mobile-donation-button" style="font-size: 20px; margin-left: 10px; margin-right: 10px; vertical-align:middle; margin-top:20px; width: 100%;">Make Your Donation <img src="https://secure2.convio.net/amca/images/content/pagebuilder/norton.png?t=1516064233130" alt="Norton Secured" style="height: 30px; "></button>
+            </div>
+          </form>
+        </div>
+      </form>
+      <div id="footer-logos" style="display: flex; justify-content: space-between; padding-left: 10%; padding-right: 10%; padding-top: 20px;">
+        <div class = 'flex-center-vert' style = "width: 19%">
+          <img style = "width: 100%" src="https://secure2.convio.net/amca/images/content/pagebuilder/screen-shot-2015-07-09-at-9.52.07-am.png" alt="bbb logo">
+        </div>
+        <div class = 'flex-center-vert' style = "width: 22%">        
+          <img style = "width: 100%" src="https://www.haitihealth.org/sites/default/files/charity-navigator-four-star-logo.gif" alt=" charity navigator">
+        </div>
+        <div class = 'flex-center-vert' style = "width: 40%;">        
+          <img style = "width: 100%;" src="https://i2.wp.com/www.force501.org/wp-content/uploads/2017/09/GuideStar-logo.png?resize=630%2C276" alt="">
+        </div>
+      </div>
+    </div>
+    <img src="https://secure.americares.org/site/PixelServer" />
+  </div>
+</body>
+</html>

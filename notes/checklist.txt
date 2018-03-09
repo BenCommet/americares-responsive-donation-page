@@ -1,0 +1,12 @@
+1. can't actually donate
+2. mobile rendering is ROUGH :)
+3. Fonts: DIN round pro is acceptable too, and it will help some of the rendering (like the 'your donation' stacking instead of being all on one line and the steps 1-2-3 stacking also.)
+4. donation form template - look into and see if that's a place that we could put this code and it would be seen by LO as a donation form
+5. other ways to give: https://secure.americares.org/site/Donation2?idb=2017334458&DONATION_LEVEL_ID_SELECTED=1&df_id=22452&22452.donation=form1&mfc_pref=T&idb=[[S76:idb]] 
+https://secure.americares.org/site/Donation2?df_id=10239&10239.donation=form1&_ga=2.85043294.698177443.1509369891-2053653425.1475678903
+the problem is there are 2 other ways to give and there is no intermediary page to show that. I think we may just have to put both ways on the dp - give a memorial gift / give a gift on behalf of a corporation
+6. What's supposed to happen when you click 'pay with paypal'?
+7. Need to change the yellow $1 and $20 in the masthead to blue.
+8. and as you noted, need a new wrapper
+9. "Americares" need to be clickable and go to www.americares.org
+10. Still owe you a better photo for the masthead!
